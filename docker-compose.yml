@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mcpx:
+    image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx:latest
+    container_name: mcpx
+    ports:
+      - "9000:9000"
+      - "3000:3000"
+    volumes:
+      - ./:/mcpx/packages/mcpx-server/config
+
+  mcpx-ui:
+    image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx-ui:latest
+    container_name: mcpx-ui
+    ports:
+      - "9001:9001"
+      - "5173:5173"
