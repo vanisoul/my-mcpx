@@ -14,5 +14,7 @@ services:
     container_name: mcpx-ui
     platform: linux/amd64
     ports:
-      - "19001:9001"
-      - "15173:5173"
+      - "9001:9001"
+      - "5173:5173"
+    # command: ["sh", "-c", "npm run start:ui & wait"]
+    # command: ["sh", "-c", "npm run start:webserver & VITE_WS_URL=ws://localhost:19001 VITE_API_SERVER_URL=http://localhost:19001 npm run start:ui & wait"]

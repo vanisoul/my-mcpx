@@ -1,12 +1,12 @@
 {
   "mcpServers": {
-    "Сontext7": {
-      "autoApprove": [],
-      "disabled": false,
-      "timeout": 60,
-      "command": "docker",
-      "args": ["run", "-i", "--rm", "context7-mcp"],
-      "transportType": "stdio"
+    "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time", "--local-timezone=America/New_York"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }
