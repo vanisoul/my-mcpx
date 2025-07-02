@@ -1,8 +1,8 @@
-version: '3.8'
 services:
   mcpx:
     image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx:latest
     container_name: mcpx
+    platform: linux/amd64
     ports:
       - "19000:9000"
       - "13000:3000"
@@ -12,6 +12,7 @@ services:
   mcpx-ui:
     image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx-ui:latest
     container_name: mcpx-ui
+    platform: linux/amd64
     ports:
       - "19001:9001"
       - "15173:5173"
