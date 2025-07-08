@@ -1,6 +1,7 @@
 services:
   mcpx:
     image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx:latest
+    restart: always
     container_name: mcpx
     platform: linux/amd64
     ports:
@@ -11,6 +12,7 @@ services:
 
   mcpx-ui:
     image: us-central1-docker.pkg.dev/prj-common-442813/mcpx/mcpx-ui:latest
+    restart: always
     container_name: mcpx-ui
     platform: linux/amd64
     ports:
